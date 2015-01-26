@@ -46,10 +46,9 @@ public abstract class BaseSwipeAdapter extends BaseAdapter implements SwipeItemM
         View v = convertView;
         if(v == null){
             v = generateView(position, parent);
-            mItemManger.initialize(v, position);
-        }else{
-            mItemManger.updateConvertView(v, position);
         }
+        mItemManger.updateConvertView(v, position);
+
         fillValues(position, v);
         return v;
     }

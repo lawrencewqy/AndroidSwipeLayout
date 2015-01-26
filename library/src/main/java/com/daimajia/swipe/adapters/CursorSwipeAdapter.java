@@ -29,11 +29,7 @@ public abstract class CursorSwipeAdapter extends CursorAdapter implements SwipeI
     public View getView(int position, View convertView, ViewGroup parent) {
         boolean convertViewIsNull = convertView == null;
         View v = super.getView(position, convertView, parent);
-        if(convertViewIsNull){
-            mItemManger.initialize(v, position);
-        }else{
-            mItemManger.updateConvertView(v, position);
-        }
+        mItemManger.updateConvertView(v, position);
         return v;
     }
 

@@ -109,6 +109,9 @@ public class ListViewExample extends Activity {
             startActivity(new Intent(this, GridViewExample.class));
             finish();
             return true;
+        }else if(id == R.id.action_recyclerview){
+            startActivity(new Intent(this, RecyclerExample.class));
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

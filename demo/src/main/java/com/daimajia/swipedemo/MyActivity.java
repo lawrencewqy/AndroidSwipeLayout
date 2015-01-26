@@ -116,6 +116,9 @@ public class MyActivity extends Activity {
         } else if(id == R.id.action_nexted){
             startActivity(new Intent(this, NestedExample.class));
             return true;
+        }else if(id == R.id.action_recyclerview){
+            startActivity(new Intent(this, RecyclerExample.class));
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

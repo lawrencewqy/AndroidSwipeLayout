@@ -42,13 +42,8 @@ public abstract class ArraySwipeAdapter<T> extends ArrayAdapter implements Swipe
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        boolean convertViewIsNull = convertView == null;
         View v = super.getView(position, convertView, parent);
-        if(convertViewIsNull){
-            mItemManger.initialize(v, position);
-        }else{
-            mItemManger.updateConvertView(v, position);
-        }
+        mItemManger.updateConvertView(v, position);
         return v;
     }
 
